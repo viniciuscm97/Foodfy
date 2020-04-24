@@ -1,0 +1,24 @@
+{
+  "name": "foodfy",
+  "version": "1.0.0",
+  "description": "Projeto criado apartir de desafio do LaunchBase da Rockseat, iniciando o frontEnd com HTML, CSS e JavaScript",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciuscm97/Foodfy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viniciuscm97/Foodfy/issues"
+  },
+  "homepage": "https://github.com/viniciuscm97/Foodfy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

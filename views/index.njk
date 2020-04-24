@@ -1,0 +1,116 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>Página principal - Foodfy</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="apresentacao-sobre">
+        <div class="texto-apresentacao">
+            <h1>As melhores receitas</h1>
+            <p>Aprenda a construir os melhores pratos
+                com receitas criadas por profissionais
+                do mundo inteiro.</p>
+        </div>
+        <div class="img-apresentacao">
+            <img src="chef.png" alt="chef">
+        </div>
+    </div>
+
+    <div class="cards-title">
+        <h2>Mais acessados</h2>
+    </div>
+
+    
+    
+    <div class="cards" id="cards">
+
+
+        <div class="card" id="burger">
+            <div class="card-img">
+                <img src="burger.png" alt="burger">
+            </div>
+
+            <div class="card-content" id="card">
+                <h3 id="Triplo bacon burguer">Triplo bacon burguer</h3>
+                <p id="por Jorge Relato">por Jorge Relato</p>
+            </div>
+        </div>
+
+        <div class="card" id="pizza">
+            <div class="card-img">
+                <img src="pizza.png" alt="pizza">
+            </div>
+
+            <div class="card-content" id="card">
+                <h3 id="Pizza 4 estações">Pizza 4 estações</h3>
+                <p id="por Fabiana Melo">por Fabiana Melo</p>
+            </div>
+        </div>
+
+        <div class="card" id="espaguete">
+            <div class="card-img">
+                <img src="espaguete.png" alt="espaguete">
+            </div>
+
+            <div class="card-content" id="card">
+                <h3 id="Espaguete ao alho">Espaguete ao alho</h3>
+                <p id="por Júlia Kinoto">por Júlia Kinoto</p>
+            </div>
+        </div>
+
+        <div class="card" id="lasanha">
+            <div class="card-img">
+                <img src="lasanha.png" alt="lasanha">
+            </div>
+
+            <div class="card-content" id="card">
+                <h3 id="Lasanha mac n’ cheese">Lasanha mac n’ cheese</h3>
+                <p id="por Juliano Vieiras">por Juliano Vieiras</p>
+            </div>
+        </div>
+
+        <div class="card" id="doce">
+            <div class="card-img">
+                <img src="doce.png" alt="doce">
+            </div>
+
+            <div class="card-content" id="card">
+                <h3 id="Docinhos pão-do-céu">Docinhos pão-do-céu</h3>
+                <p id="por Ricardo Golvea">por Ricardo Golvea</p>
+            </div>
+        </div>
+
+        <div class="card" id="asinhas">
+            <div class="card-img">
+                <img src="asinhas.png" alt="asinhas">
+            </div>
+
+            <div class="card-content" id="card">
+                <h3 id="Asinhas de frango ao barbecue">Asinhas de frango ao barbecue</h3>
+                <p id="por Vania Steroski">por Vania Steroski</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-img">
+                <img src="asinhas.png" alt="comida">
+            </div>
+
+            <div class="modal-content">
+                <h3>1</h3>
+                <p>2</p>
+            </div>
+            <div class="close-modal">
+                <p>Fechar</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+    
+
+{% endblock content %}
