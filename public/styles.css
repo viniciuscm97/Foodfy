@@ -202,7 +202,7 @@ footer{
     width: 660px;
     border-radius: 16px;
     position: relative;
-    top: 30%;
+    top: 15%;
     margin: 0 auto;
     
 }
@@ -248,8 +248,15 @@ footer{
 .erro{
     max-width: 800px;
     margin: 20px auto;
+    color: black;
 }
 
 .erro h1{
-    font-weight: bold;
+    font-family: 'Roboto', bold;
+
+}
+
+.erro p{
+    font-family: var(--font-roboto-regular);
+
 }

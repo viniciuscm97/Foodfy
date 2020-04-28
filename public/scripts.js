@@ -8,7 +8,7 @@ for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener("click", function(){
         const imageId = cards[i].getAttribute('id')
         modalOverlay.classList.add('active')
-        modalOverlay.querySelector('img').src = `imagens/${imageId}.png`
+        modalOverlay.querySelector('img').src = `${imageId}.png`
 
         var h3Cards = divCardsContent[i].getElementsByTagName("h3");
         var pCards = divCardsContent[i].getElementsByTagName("p");

@@ -1,26 +1,14 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-<title>Página principal - Foodfy</title>
+<title>Receitas - Foodfy</title>
 {% endblock head %}
 
 {% block content %}
-    <div class="apresentacao-sobre">
-        <div class="texto-apresentacao">
-            <h1>{{infoHome.title}}</h1>
-            <p>{{infoHome.content}}</p>
-        </div>
-        <div class="img-apresentacao">
-            <img src="{{infoHome.img}}.png" alt="Imagem de {{infoHome.img}}">
-        </div>
-    </div>
 
-    <div class="cards-title">
-        <h2>Mais acessados</h2>
-    </div>
 
     <div class="cards" id="cards">
-        {% for infoRecipes in infoHome.cardRecipes %}
+        {% for infoRecipes in recipes %}
     
             <div class="card" id="{{infoRecipes.img}}">
                 <div class="card-img">
@@ -53,8 +41,8 @@
         </div>
 
     </div>
-    
+
+
     <script src="scripts.js"></script>
     
-
 {% endblock content %}
