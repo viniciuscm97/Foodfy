@@ -15,42 +15,21 @@
         </div>
     </div>
 
-    <div class="cards-title">
-        <h2>Mais acessados</h2>
-    </div>
-
     <div class="cards" id="cards">
         {% for infoRecipes in infoHome.cardRecipes %}
     
-            <div class="card" id="{{infoRecipes.img}}">
+            <div class="card" id="{{infoRecipes.title}}">
                 <div class="card-img">
-                    <img src="{{infoRecipes.img}}.png" alt="{{infoRecipes.name}}">
+                    <img src="{{infoRecipes.imageCard}}.png" alt="{{infoRecipes.title}}">
                 </div>
 
                 <div class="card-content">
-                    <h3>{{infoRecipes.name}}</h3>
-                    <p>{{infoRecipes.madeby}}</p>
+                    <h3>{{infoRecipes.title}}</h3>
+                    <p>{{infoRecipes.author}}</p>
                 </div>
             </div>
         {% endfor %}
 
-
-    </div>
-
-    <div class="modal-overlay">
-        <div class="modal">
-            <div class="modal-img">
-                <img src="asinhas.png" alt="comida">
-            </div>
-
-            <div class="modal-content">
-                <h3>1</h3>
-                <p>2</p>
-            </div>
-            <div class="close-modal">
-                <p>Fechar</p>
-            </div>
-        </div>
 
     </div>
     

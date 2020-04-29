@@ -1,28 +1,55 @@
-const modalOverlay = document.querySelector('.modal-overlay')
 const cards = document.querySelectorAll('.card')
 
-const divCardsContent = document.querySelectorAll('.card-content')
+var showHide = true
+
+const show = "Mostrar"
+const hide = "Esconder"
+
+// ingredients
+const closeHidenIngredients = document.querySelector('.more-infoIngredients')
+const recipeIngredients = document.querySelector('.recipe-ingredients')
+
+//prepare
+const closeHidenPreparations = document.querySelector('.more-infoPreparation')
+const recipePreparation = document.querySelector('.recipe-preparation')
+
+// ingredients
+const closeHidenInformation = document.querySelector('.more-infoInformation')
+const recipeInformation = document.querySelector('.recipe-information')
 
 
+// calling click listener
+closeHidenIngredients.addEventListener('click',function(){
+    showMoreInformation(closeHidenIngredients, recipeIngredients)
+})
+
+closeHidenPreparations.addEventListener('click',function(){
+    showMoreInformation(closeHidenPreparations, recipePreparation)
+})
+
+closeHidenInformation.addEventListener('click',function(){
+    showMoreInformation(closeHidenInformation, recipeInformation)
+})
+// entering into recipes
 for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener("click", function(){
-        const imageId = cards[i].getAttribute('id')
-        modalOverlay.classList.add('active')
-        modalOverlay.querySelector('img').src = `${imageId}.png`
-
-        var h3Cards = divCardsContent[i].getElementsByTagName("h3");
-        var pCards = divCardsContent[i].getElementsByTagName("p");
-
-        modalOverlay.querySelector('h3').innerHTML = h3Cards[0].innerHTML
-        modalOverlay.querySelector('p').innerHTML = pCards[0].innerHTML
         
+        window.location.href = `/recipes/${i}`
     })
     
 }
 
+// function to show and hide more information
 
-document.querySelector('.close-modal').addEventListener('click', function(){
-    modalOverlay.classList.remove('active')
+function showMoreInformation(classButton, classInfo){
+    if(showHide){
+        classInfo.classList.add('hidden')
+        classButton.querySelector('p').innerHTML = show
+        showHide = false
+    }else{
+        classInfo.classList.remove('hidden') 
+        classButton.querySelector('p').innerHTML = hide
+        showHide = true
+    }
 
-})
-
+}

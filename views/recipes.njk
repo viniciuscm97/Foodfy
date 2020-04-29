@@ -6,18 +6,75 @@
 
 {% block content %}
 
+{% if recipe %}
+    <div class="recipe">
+        <div class="recipe-img">
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+        </div>
+
+        <div class="recipe-img-desc">
+            <h1>{{recipe.title}}</h1>
+            <p>{{recipe.author}}</p>
+        </div>
+
+        <div class="recipe-title">
+            <h1>Ingredientes</h1>
+            <div class="more-infoIngredients">
+                <p>Esconder</p>
+            </div>
+
+            
+        </div>
+
+        <div class="recipe-ingredients">
+            <ul>
+                {% for ing in recipe.ingredients %}
+                <li>{{ing}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="recipe-title">
+            <h1>Modo de preparo</h1>
+            <div class="more-infoPreparation">
+                <p>Esconder</p>
+            </div>
+        </div>
+        
+        <div class="recipe-preparation">
+            <ul>
+                {% for prepare in recipe.preparation %}
+                    <li>{{prepare}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+       <div class="recipe-title">
+            <h1>Informações adicionais</h1>
+                
+            <div class="more-infoInformation">
+                <p>Esconder</p>
+            </div>
+                
+        </div>
+
+        <div class="recipe-information">
+            <p>{{recipe.information}}</p>
+        </div>
+    </div>
+{% endif %}
 
     <div class="cards" id="cards">
         {% for infoRecipes in recipes %}
     
-            <div class="card" id="{{infoRecipes.img}}">
+            <div class="card" id="{{infoRecipes.title}}">
                 <div class="card-img">
-                    <img src="{{infoRecipes.img}}.png" alt="{{infoRecipes.name}}">
+                    <img src="{{infoRecipes.imageCard}}.png" alt="{{infoRecipes.title}}">
                 </div>
 
                 <div class="card-content">
-                    <h3>{{infoRecipes.name}}</h3>
-                    <p>{{infoRecipes.madeby}}</p>
+                    <h3>{{infoRecipes.title}}</h3>
+                    <p>{{infoRecipes.author}}</p>
                 </div>
             </div>
         {% endfor %}
@@ -25,24 +82,7 @@
 
     </div>
 
-    <div class="modal-overlay">
-        <div class="modal">
-            <div class="modal-img">
-                <img src="asinhas.png" alt="comida">
-            </div>
 
-            <div class="modal-content">
-                <h3>1</h3>
-                <p>2</p>
-            </div>
-            <div class="close-modal">
-                <p>Fechar</p>
-            </div>
-        </div>
-
-    </div>
-
-
-    <script src="scripts.js"></script>
+    <script src="/scripts.js"></script>
     
 {% endblock content %}
